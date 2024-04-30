@@ -45,7 +45,7 @@ function App() {
         const response = await fetch(`${url}api/players`);
         if (response.ok) {
           const players = await response.json();
-          setAllUsers(allUsers);
+          setAllUsers(players);
         }
       } catch (error) {
         console.error(error);
@@ -59,7 +59,7 @@ function App() {
         method: "POST",
         body: JSON.stringify({
           name: user.name,
-          player: user.player,
+          players: user.player,
         }),
         headers: {
           "Content-Type": "application/json",
