@@ -83,7 +83,7 @@ function App() {
 
   function toggleLiked(i) {
     setTeams(
-      teams.map((t, index) => (index + 1 === i ? { ...t, liked: !t.liked } : t))
+      teams.map((t, index) => (t._id === i ? { ...t, liked: !t.liked } : t))
     );
   }
 
