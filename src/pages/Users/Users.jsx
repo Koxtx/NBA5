@@ -42,7 +42,7 @@ export default function Users({
         {allUsers.map((user, index) => (
           <li key={index} className="d-flex flex-row align-items-center mb-20">
             <span className={`flex-fill mr-20 ${styles.display}`}>
-              {user.name} | {user.player}
+              {user.name} | {user.players}
             </span>
             <button
               onClick={() => {
