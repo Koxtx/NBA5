@@ -1,0 +1,56 @@
+@use "../../assets/styles/mixin" as mixin;
+
+.header {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  height: 70px;
+  border-bottom: 2px solid orange;
+  @include mixin.sm-lt {
+    width: 94%;
+  }
+  .searchBar {
+    padding: 10px 15px;
+    border: 2px solid orange;
+    border-radius: 20px;
+    background-color: #0c1b3b;
+    @include mixin.sm-lt {
+      padding: 5px 7px;
+    }
+    input {
+      outline: 0;
+      border: 0;
+      background-color: #0c1b3b;
+      color: orange;
+      &::placeholder {
+        color: white;
+      }
+    }
+  }
+
+  .mainTitle {
+    color: orange;
+    font-size: 40px;
+    margin: 0;
+    @include mixin.sm-lt {
+      font-size: 30px;
+    }
+  }
+  .burgerMenu {
+    @include mixin.sm-lt {
+      display: none;
+    }
+  }
+  .mobileHeader {
+    font-size: 2.2rem;
+    display: none;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
+    @include mixin.sm-lt {
+      display: block;
+      font-size: 1.8rem;
+    }
+  }
+}

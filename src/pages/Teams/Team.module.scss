@@ -1,0 +1,27 @@
+@use "../../assets/styles/mixin" as mixin;
+
+.main {
+  width: 80%;
+  margin: 0 auto;
+  @include mixin.sm-lt {
+    width: 90%;
+  }
+  .presentation {
+    background-color: #0c1b3b;
+    padding: 30px;
+    color: white;
+    margin-top: 0px;
+  }
+
+  .burgerMenu {
+    display: block;
+    @include mixin.sm-lt {
+      display: none;
+    }
+  }
+}
+
+.east {
+  color: white;
+  font-weight: 600;
+}

@@ -1,0 +1,41 @@
+@use "../../assets/styles/mixin" as mixin;
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0c1b3b;
+  .link {
+    color: orange;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  .searchBar {
+    padding: 10px 15px;
+    border: 2px solid orange;
+    border-radius: 20px;
+    background-color: #0c1b3b;
+    input {
+      outline: 0;
+      border: 0;
+      background-color: #0c1b3b;
+      color: orange;
+      &::placeholder {
+        color: white;
+      }
+    }
+  }
+  .list {
+    width: 60%;
+    min-height: 500px;
+    border: 2px solid orange;
+    background-color: #0c1b3b;
+    @include mixin.sm-lt {
+      width: 90%;
+    }
+    .display {
+      color: orangered;
+    }
+  }
+}

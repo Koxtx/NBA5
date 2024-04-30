@@ -1,0 +1,21 @@
+.container {
+  position: absolute;
+  top: 80px;
+  right: 10px;
+  width: 200px;
+  border-radius: 20px;
+  background-color: var(--primary);
+  border: 2px solid orange;
+  box-shadow: var(--box-shadow);
+  li {
+    padding: 5px 15px;
+    cursor: pointer;
+    border-radius: 20px;
+    color: orange;
+    transition: background-color 0.2s;
+    &:hover {
+      background-color: var(--orange);
+      color: var(--primary);
+    }
+  }
+}

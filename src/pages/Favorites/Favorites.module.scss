@@ -1,0 +1,27 @@
+@use "../../assets/styles/mixin" as mixin;
+
+.main {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #0c1b3b;
+  .link {
+    color: orange;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  .list {
+    width: 60%;
+    margin: 0 auto;
+    min-height: 500px;
+    border: 2px solid orange;
+    background-color: #0c1b3b;
+    @include mixin.sm-lt {
+      width: 90%;
+    }
+    .display {
+      color: orangered;
+    }
+  }
+}
